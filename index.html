@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buhos Seguridad Privada - Expertos en Seguridad</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            background-color: #222;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+        h1 img {
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .inicio {
+            background-image: url('logo.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .inicio-content {
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+        .inicio h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        section {
+            padding: 20px;
+            background-color: #444;
+            margin-bottom: 20px;
+        }
+        .servicio {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            background-image: url('imagen2.jpg'); /* Fondo de la sección de servicios */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Fija la imagen de fondo */
+            color: #fff; /* Color del texto sobre el fondo */
+        }
+        .servicio-item {
+            width: calc(33.33% - 40px);
+            background-color: rgba(0, 0, 0, 0.7); /* Color de fondo del cuadro de servicio */
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 0 20px 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .servicio-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .servicio-item p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .ver-mas {
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .ver-mas:hover {
+            background-color: #ddd;
+        }
+        .nosotros {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+        .nosotros-text {
+            max-width: 600px;
+            padding: 20px;
+        }
+        .nosotros h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .nosotros p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+        .nosotros img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 20px; /* Espacio debajo de la imagen en móviles */
+        }
+        .contacto {
+            background-image: url('imagen3.jpg'); /* Fondo de la sección de contacto */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Fija la imagen de fondo */
+            color: #fff; /* Color del texto sobre el fondo */
+            padding: 50px 0; /* Añadir espaciado adicional arriba y abajo */
+        }
+        .contacto-text {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Color de fondo semi-transparente */
+            border-radius: 10px;
+        }
+        .contacto h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .contacto ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .contacto ul li {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .contacto iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: 0;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Media queries para ajustar diseño en móviles */
+        @media (max-width: 768px) {
+            .servicio {
+                flex-direction: column;
+                align-items: center;
+            }
+            .servicio-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .nosotros {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .nosotros-text {
+                max-width: 100%;
+                padding: 20px;
+            }
+            .nosotros img {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 20px; /* Asegura espacio debajo de la imagen */
+            }
+            .contacto-text {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><img src="logo.png" alt="Logo"> Buhos Seguridad Privada</h1>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#accesos">Accesos Directos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="inicio" id="servicios">
+        <div class="inicio-content">
+            <h2>Bienvenido a Buhos Seguridad Privada</h2>
+            <p>Buhos es una empresa especializada en seguridad de infraestructuras a través del personal especializado y las mejores tecnologías proporcionadas por nuestros proveedores.</p>
+        </div>
+    </section>
+
+    <section class="servicio">
+        <div class="servicio-item">
+            <h3>Seguridad especializada</h3>
+            <p>Guardias de Seguridad especializados por segmento de cliente. La integración de la tecnología junto a la capacitación y formación de los colaboradores fortalece nuestra oferta permitiéndonos brindar a cada cliente valor agregado en su servicio.</p>
+        </div>
+        <div class="servicio-item">
+            <h3>Alarmas</h3>
+            <p>Sistema de alarmas monitoreadas para hogares, negocios e industrias, desde nuestro Centro de Operaciones. Brindamos soluciones a medida de las necesidades de protección de cada cliente.</p>
+        </div>
+        <div class="servicio-item">
+            <h3>Consultoría en seguridad</h3>
+            <p>Desarrollamos planes, en base a la actividad y el entorno del cliente, con el objetivo de presentar propuestas bajo el marco legal aplicable que minimicen los riesgos que pueden afectar al negocio.</p>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <div class="nosotros">
+            <img src="imagen.jpg" alt="Imagen Sobre Nosotros">
+            <div class="nosotros-text">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una empresa comprometida con la seguridad y protección de nuestros clientes. Con más de 10 años en el mercado, nos especializamos en ofrecer soluciones integrales que combinan la experiencia de nuestro equipo humano con la tecnología más avanzada.</p>
+                <p>Nuestro objetivo es proporcionar tranquilidad y confianza a nuestros clientes, adaptándonos a sus necesidades específicas y brindando un servicio personalizado y eficiente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="contacto-text">
+            <h2>Contacto</h2>
+            <p>Puedes contactarnos a través de los siguientes medios:</p>
+            <ul>
+                <li>Teléfono: 123-456-789</li>
+                <li>Email: contacto@buhosseguridad.com</li>
+                <li>Dirección: Lisandro de la Torre 6204, Del Viso, Buenos Aires</li>
+            </ul>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6560490366326!2d-58.816623384824105!3d-34.53435118047381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc992cf6182d8f%3A0xa79073a98402dfe2!2sLisandro%20de%20la%20Torre%206204%2C%20B1669%20Del%20Viso%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1719184143435!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="accesos">
+        <h2>Accesos Directos</h2>
+        <ul>
+            <li><a href="#">Acceso Directo 1</a></li>
+            <li><a href="#">Acceso Directo 2</a></li>
+            <li><a href="#">Acceso Directo 3</a></li>
+            <li><a href="#">Acceso Directo 4</a></li>
+            <li><a href="#">Acceso Directo 5</a></li>
+        </ul>
+    </section>
+
+    <script>
+        var titleText = ["Buhos Seguridad Privada - Expertos en Seguridad", "¡Protección confiable para tu negocio!"];
+        var counter = 0;
+        var title = document.title;
+
+        setInterval(function() {
+            counter++;
+            if (counter >= titleText.length) {
+                counter = 0;
+            }
+            document.title = titleText[counter];
+        }, 2000); // Cambia el título cada 2 segundos (2000 milisegundos)
+    </script>
+</body>
+</html>
